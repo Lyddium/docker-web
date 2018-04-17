@@ -1,0 +1,7 @@
+#!ipxe
+
+set base http://cloud.centos.org/centos/7/atomic/images/CentOS-Atomic-Host-7-Installer.iso
+  
+kernel ${base}/images/pxeboot/vmlinuz initrd=initrd.img repo=${base}
+initrd ${base}/images/pxeboot/initrd.img
+boot
